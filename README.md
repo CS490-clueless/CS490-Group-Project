@@ -36,15 +36,18 @@ Your wardrobe in an app.
 
 * User can login
 * User can add an article of clothing to their account
-* User can view the articles of clothing in the app through the uploading of photos
+* User can create an outfit combination
+* User can view the articles of clothing in the app through the My Closet tab
 * User can remove articles of clothing from their account
 * User can view their clothes in categories
+* User can view details of their clothing
 * User can create a new account
 * User can logout
 
 **Optional Nice-to-have Stories**
 
-* User can favorite their clothes
+* User can favorite/save their outfits
+* User can randomize outfit combinations
 * User can view other people's wardrobe, if they choose to make it public
 * User can search for clothes online
 * User can make a wishlist
