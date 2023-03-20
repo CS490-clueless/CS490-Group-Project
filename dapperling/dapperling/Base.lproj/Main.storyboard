@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="Cnp-GO-YdP">
             <objects>
-                <viewController id="OxF-yy-FUX" customClass="LoginViewController" customModule="lab_insta_parse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OxF-yy-FUX" customClass="LoginViewController" customModule="dapperling" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="126-lY-OOl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dapperling" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHQ-Gj-GrN">
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="60"/>
-                                                <fontDescription key="fontDescription" name="NotoNastaliqUrdu" family="Noto Nastaliq Urdu" pointSize="24"/>
+                                                <fontDescription key="fontDescription" name="NotoNastaliqUrdu-Bold" family="Noto Nastaliq Urdu" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -128,7 +128,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="g8s-Jq-9ft">
             <objects>
-                <viewController id="Seg-p2-lvj" customClass="SignUpViewController" customModule="lab_insta_parse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Seg-p2-lvj" customClass="SignUpViewController" customModule="dapperling" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AI8-My-CBo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +139,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="FlU-IV-WLa">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="166.66666666666666"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubG-5w-b6a">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubG-5w-b6a">
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="28.666666666666668"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <nil key="textColor"/>
