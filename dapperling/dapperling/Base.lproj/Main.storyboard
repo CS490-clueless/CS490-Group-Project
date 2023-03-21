@@ -107,6 +107,112 @@
             </objects>
             <point key="canvasLocation" x="1916.7938931297708" y="-2.8169014084507045"/>
         </scene>
+        <!--Outfit-->
+        <scene sceneID="rDb-dz-wDu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" title="Outfit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xXd-RL-TbQ" customClass="ViewController" customModule="dapperling" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="azy-qe-9rH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NQZ-1V-Lbc">
+                                <rect key="frame" x="20" y="123" width="353" height="626"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iQ-mb-CtO">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="150.66666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYR-XF-oQA">
+                                                <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="150.66666666666666"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XA5-Uz-Trk">
+                                                <rect key="frame" x="34.333333333333343" y="0.0" width="284.33333333333326" height="150.66666666666666"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x32-YW-wIO">
+                                                <rect key="frame" x="318.66666666666669" y="0.0" width="34.333333333333314" height="150.66666666666666"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vgp-AP-EVM">
+                                        <rect key="frame" x="0.0" y="158.66666666666669" width="353" height="150.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6I-kn-dBc">
+                                                <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="150.33333333333334"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G3l-KQ-NbY">
+                                                <rect key="frame" x="35.333333333333343" y="0.0" width="282.33333333333326" height="150.33333333333334"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gea-3Q-KUG">
+                                                <rect key="frame" x="318.66666666666669" y="0.0" width="34.333333333333314" height="150.33333333333334"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="699-3Z-wQs">
+                                        <rect key="frame" x="0.0" y="317" width="353" height="150.66666666666663"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyg-au-OKH">
+                                                <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="150.66666666666666"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hCq-7e-gA2">
+                                                <rect key="frame" x="35.333333333333343" y="0.0" width="282.33333333333326" height="150.66666666666666"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XU-Ln-gKW">
+                                                <rect key="frame" x="318.66666666666669" y="0.0" width="34.333333333333314" height="150.66666666666666"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="USO-zc-aAs">
+                                        <rect key="frame" x="0.0" y="475.66666666666657" width="353" height="150.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtv-fi-8lc">
+                                                <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="150.33333333333334"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tzf-fJ-d8m">
+                                                <rect key="frame" x="35.333333333333343" y="0.0" width="282.33333333333326" height="150.33333333333334"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7y-FJ-Utd">
+                                                <rect key="frame" x="318.66666666666669" y="0.0" width="34.333333333333314" height="150.33333333333334"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R3w-s2-eg5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NQZ-1V-Lbc" firstAttribute="top" secondItem="R3w-s2-eg5" secondAttribute="top" constant="20" id="0Wa-bt-vCA"/>
+                            <constraint firstItem="R3w-s2-eg5" firstAttribute="bottom" secondItem="NQZ-1V-Lbc" secondAttribute="bottom" constant="20" id="FyW-Pt-uUU"/>
+                            <constraint firstItem="R3w-s2-eg5" firstAttribute="bottom" secondItem="NQZ-1V-Lbc" secondAttribute="bottom" constant="20" id="RKP-Ml-9jo"/>
+                            <constraint firstItem="NQZ-1V-Lbc" firstAttribute="top" secondItem="R3w-s2-eg5" secondAttribute="top" constant="20" id="emD-Hi-hkh"/>
+                            <constraint firstItem="NQZ-1V-Lbc" firstAttribute="leading" secondItem="R3w-s2-eg5" secondAttribute="leading" constant="20" id="kw2-WU-Vf0"/>
+                            <constraint firstItem="R3w-s2-eg5" firstAttribute="trailing" secondItem="NQZ-1V-Lbc" secondAttribute="trailing" constant="20" id="qZY-Ai-IHO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gwQ-qz-O4q"/>
+                    <connections>
+                        <outlet property="Accessory" destination="XA5-Uz-Trk" id="ahZ-1p-onc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NWN-a3-OiG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3770.2290076335876" y="726.76056338028172"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="t3h-eI-okB">
             <objects>
@@ -207,8 +313,45 @@
             </objects>
             <point key="canvasLocation" x="2708" y="-3"/>
         </scene>
+        <!--Make an Outfit-->
+        <scene sceneID="7Ag-3S-2PO">
+            <objects>
+                <tabBarController title="Make an Outfit" automaticallyAdjustsScrollViewInsets="NO" id="s92-Tx-4lh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A9z-PE-Num">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="j7B-LW-kXY" kind="relationship" relationship="viewControllers" id="b4C-wY-ZpT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wKf-vt-vOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1916.7938931297708" y="726.76056338028172"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lgb-uN-zrw">
+            <objects>
+                <navigationController title="Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="j7B-LW-kXY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Make an Outfit" selectedImage="tshirt" catalog="system" id="WmU-7A-Aas" userLabel="Make an Outfit"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A4g-S5-YDr">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xXd-RL-TbQ" kind="relationship" relationship="rootViewController" id="5jP-dD-rvm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EHn-vr-fkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2843.5114503816794" y="726.76056338028172"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="tshirt" catalog="system" width="128" height="98"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
