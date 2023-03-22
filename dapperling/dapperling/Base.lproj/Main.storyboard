@@ -110,7 +110,7 @@
         <!--Outfit-->
         <scene sceneID="rDb-dz-wDu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" title="Outfit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xXd-RL-TbQ" customClass="ViewController" customModule="dapperling" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Outfit" id="xXd-RL-TbQ" customClass="ViewController" customModule="dapperling" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="azy-qe-9rH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,6 +192,16 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l58-J7-HsD">
+                                <rect key="frame" x="15" y="60" width="85" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Log Out"/>
+                                <connections>
+                                    <action selector="onLogOutTapped:" destination="xXd-RL-TbQ" eventType="touchUpInside" id="L0O-YY-so2"/>
+                                    <segue destination="OxF-yy-FUX" kind="show" id="YRe-ng-XC3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R3w-s2-eg5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -204,14 +214,16 @@
                             <constraint firstItem="R3w-s2-eg5" firstAttribute="trailing" secondItem="NQZ-1V-Lbc" secondAttribute="trailing" constant="20" id="qZY-Ai-IHO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gwQ-qz-O4q"/>
+                    <tabBarItem key="tabBarItem" title="Make an Outfit" image="tshirt.fill" catalog="system" id="doR-E0-Hv7"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="Accessory" destination="XA5-Uz-Trk" id="ahZ-1p-onc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWN-a3-OiG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3770.2290076335876" y="726.76056338028172"/>
+            <point key="canvasLocation" x="2770" y="727"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t3h-eI-okB">
@@ -313,28 +325,29 @@
             </objects>
             <point key="canvasLocation" x="2708" y="-3"/>
         </scene>
-        <!--Make an Outfit-->
+        <!--Tab Bar Controller-->
         <scene sceneID="7Ag-3S-2PO">
             <objects>
-                <tabBarController title="Make an Outfit" automaticallyAdjustsScrollViewInsets="NO" id="s92-Tx-4lh" sceneMemberID="viewController">
+                <tabBarController title="Tab Bar Controller" automaticallyAdjustsScrollViewInsets="NO" id="s92-Tx-4lh" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="D3d-pO-ZJB"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A9z-PE-Num">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="j7B-LW-kXY" kind="relationship" relationship="viewControllers" id="b4C-wY-ZpT"/>
+                        <segue destination="xXd-RL-TbQ" kind="relationship" relationship="viewControllers" id="Zvg-r7-mEX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKf-vt-vOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1916.7938931297708" y="726.76056338028172"/>
+            <point key="canvasLocation" x="1917" y="727"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Make an Outfit-->
         <scene sceneID="Lgb-uN-zrw">
             <objects>
-                <navigationController title="Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="j7B-LW-kXY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Make an Outfit" selectedImage="tshirt" catalog="system" id="WmU-7A-Aas" userLabel="Make an Outfit"/>
+                <navigationController storyboardIdentifier="ViewController" title="Make an Outfit" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j7B-LW-kXY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A4g-S5-YDr">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -342,16 +355,19 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="xXd-RL-TbQ" kind="relationship" relationship="rootViewController" id="5jP-dD-rvm"/>
+                        <segue destination="s92-Tx-4lh" kind="relationship" relationship="rootViewController" id="EH6-4f-49U"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHn-vr-fkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2843.5114503816794" y="726.76056338028172"/>
+            <point key="canvasLocation" x="990" y="712"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YRe-ng-XC3"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="tshirt" catalog="system" width="128" height="98"/>
+        <image name="tshirt.fill" catalog="system" width="128" height="98"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
