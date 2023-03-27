@@ -10,7 +10,13 @@ import ParseSwift
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var Accessory: UIImageView!
+    @IBOutlet weak var Accessory: UIImageView! {
+        didSet {
+            Accessory.isUserInteractionEnabled = true
+            Accessory.image = UIImage(named: "PurdueLogo")
+        }
+    }
+    
     
     
     override func viewDidLoad() {
@@ -19,6 +25,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onLogOutTapped(_ sender: Any) {
+        print("logout pressed")
         showConfirmLogoutAlert()
     }
     
@@ -33,6 +40,14 @@ class ViewController: UIViewController {
         present(alertController, animated: true)
     }
     
-   
+    
+    
+    @IBAction func accessoryTapped(_ sender: UITapGestureRecognizer) {
+        if let tappedView = sender.view {
+            performSegue(withIdentifier: "detailSegue", sender: tappedView)
+        }
+    }
+    
+    
 }
 
