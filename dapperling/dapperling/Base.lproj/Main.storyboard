@@ -110,19 +110,20 @@
         <!--Make an Outfit-->
         <scene sceneID="rDb-dz-wDu">
             <objects>
-                <viewController id="xXd-RL-TbQ" customClass="ViewController" customModule="dapperling" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="xXd-RL-TbQ" customClass="ViewController" customModule="dapperling" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="azy-qe-9rH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYR-XF-oQA">
                                 <rect key="frame" x="20" y="148" width="34.333333333333336" height="138.33333333333334"/>
+
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XA5-Uz-Trk">
-                                <rect key="frame" x="54.333333333333485" y="148" width="284.66666666666663" height="138.33333333333334"/>
+
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -131,6 +132,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x32-YW-wIO">
                                 <rect key="frame" x="339" y="148" width="34" height="138.33333333333334"/>
+
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
@@ -138,6 +140,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6I-kn-dBc">
                                 <rect key="frame" x="20" y="296.33333333333326" width="34.333333333333336" height="152.33333333333334"/>
+
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
@@ -159,6 +162,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyg-au-OKH">
                                 <rect key="frame" x="20" y="458.66666666666674" width="34.333333333333336" height="138"/>
+
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
@@ -207,13 +211,14 @@
                                 <connections>
                                     <action selector="onLogOutTapped:" destination="xXd-RL-TbQ" eventType="touchUpInside" id="deg-V6-2ps"/>
                                 </connections>
+
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R3w-s2-eg5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Make an Outfit" image="tshirt" catalog="system" id="8y4-Xa-s97"/>
                     <toolbarItems/>
+
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="Accessory" destination="XA5-Uz-Trk" id="ahZ-1p-onc"/>
@@ -230,7 +235,7 @@
                 <tapGestureRecognizer id="3cG-Vy-Spe" userLabel="Bottom"/>
                 <tapGestureRecognizer id="W0g-yU-bjG" userLabel="Shoes"/>
             </objects>
-            <point key="canvasLocation" x="4641.9847328244277" y="726.76056338028172"/>
+            <point key="canvasLocation" x="5568.7022900763359" y="726.76056338028172"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Jb5-qO-fZW">
@@ -315,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ovf-y6-Ifu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5441.9847328244268" y="726.76056338028172"/>
+            <point key="canvasLocation" x="6367.1755725190833" y="726.76056338028172"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t3h-eI-okB">
@@ -417,27 +422,6 @@
             </objects>
             <point key="canvasLocation" x="2708" y="-3"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ZIK-5i-73C">
-            <objects>
-                <navigationController storyboardIdentifier="ViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4AP-Cx-Fjz" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xTl-7G-y7Q">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="PHT-Gh-EEA" kind="relationship" relationship="rootViewController" id="UQE-os-zgw"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vJj-ub-hSQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2788.5496183206105" y="726.76056338028172"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Wqg-ia-U4W">
             <objects>
@@ -450,12 +434,31 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="xXd-RL-TbQ" kind="relationship" relationship="viewControllers" id="iEt-pb-whG"/>
+                        <segue destination="NWB-JF-rii" kind="relationship" relationship="viewControllers" id="iEt-pb-whG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMG-vB-e3W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3715.2671755725191" y="726.76056338028172"/>
+            <point key="canvasLocation" x="3750" y="727"/>
+        </scene>
+        <!--Make an Outfit-->
+        <scene sceneID="dXt-35-ICA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NWB-JF-rii" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Make an Outfit" image="tshirt" catalog="system" id="8y4-Xa-s97"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SXq-17-TyS">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xXd-RL-TbQ" kind="relationship" relationship="rootViewController" id="tt3-LP-yrQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FfZ-G3-j0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4641.9847328244277" y="726.76056338028172"/>
         </scene>
     </scenes>
     <resources>
