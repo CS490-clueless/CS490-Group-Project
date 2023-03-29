@@ -107,7 +107,7 @@
             </objects>
             <point key="canvasLocation" x="1916.7938931297708" y="-2.8169014084507045"/>
         </scene>
-        <!--Title-->
+        <!--Make an Outfit-->
         <scene sceneID="rDb-dz-wDu">
             <objects>
                 <viewController id="xXd-RL-TbQ" customClass="ViewController" customModule="dapperling" customModuleProvider="target" sceneMemberID="viewController">
@@ -115,125 +115,105 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NQZ-1V-Lbc">
-                                <rect key="frame" x="20" y="123" width="353" height="577"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iQ-mb-CtO">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="138.33333333333334"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYR-XF-oQA">
-                                                <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="138.33333333333334"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
-                                            </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XA5-Uz-Trk">
-                                                <rect key="frame" x="34.333333333333343" y="0.0" width="284.33333333333326" height="138.33333333333334"/>
-                                                <gestureRecognizers/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="XA5-Uz-Trk" secondAttribute="height" multiplier="142:69" id="5TW-UF-4Dl"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="saX-6r-GHM" appends="YES" id="uXm-jn-V9h"/>
-                                                </connections>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x32-YW-wIO">
-                                                <rect key="frame" x="318.66666666666669" y="0.0" width="34.333333333333314" height="138.33333333333334"/>
-                                                <gestureRecognizers/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vgp-AP-EVM">
-                                        <rect key="frame" x="0.0" y="146.33333333333331" width="353" height="138.33333333333331"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6I-kn-dBc">
-                                                <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="138.33333333333334"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
-                                            </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G3l-KQ-NbY">
-                                                <rect key="frame" x="35.333333333333343" y="0.0" width="282.33333333333326" height="138.33333333333334"/>
-                                                <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="7UM-Tf-zPy" appends="YES" id="mhX-dd-AEE"/>
-                                                    <outletCollection property="gestureRecognizers" destination="7UM-Tf-zPy" appends="YES" id="6dT-oz-VQA"/>
-                                                </connections>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gea-3Q-KUG">
-                                                <rect key="frame" x="318.66666666666669" y="0.0" width="34.333333333333314" height="138.33333333333334"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="699-3Z-wQs">
-                                        <rect key="frame" x="0.0" y="292.66666666666669" width="353" height="138"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyg-au-OKH">
-                                                <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="138"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
-                                            </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hCq-7e-gA2">
-                                                <rect key="frame" x="35.333333333333343" y="0.0" width="282.33333333333326" height="138"/>
-                                                <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="3cG-Vy-Spe" appends="YES" id="Z32-qe-bPb"/>
-                                                    <outletCollection property="gestureRecognizers" destination="3cG-Vy-Spe" appends="YES" id="2Vv-Xq-wqk"/>
-                                                </connections>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XU-Ln-gKW">
-                                                <rect key="frame" x="318.66666666666669" y="0.0" width="34.333333333333314" height="138"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="USO-zc-aAs">
-                                        <rect key="frame" x="0.0" y="438.66666666666663" width="353" height="138.33333333333337"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtv-fi-8lc">
-                                                <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="138.33333333333334"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
-                                            </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tzf-fJ-d8m">
-                                                <rect key="frame" x="35.333333333333343" y="0.0" width="282.33333333333326" height="138.33333333333334"/>
-                                                <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="W0g-yU-bjG" appends="YES" id="CZY-ju-hNa"/>
-                                                    <outletCollection property="gestureRecognizers" destination="W0g-yU-bjG" appends="YES" id="5yz-Km-325"/>
-                                                </connections>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7y-FJ-Utd">
-                                                <rect key="frame" x="318.66666666666669" y="0.0" width="34.333333333333314" height="138.33333333333334"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYR-XF-oQA">
+                                <rect key="frame" x="20" y="148" width="34.333333333333336" height="138.33333333333334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XA5-Uz-Trk">
+                                <rect key="frame" x="54.333333333333485" y="148" width="284.66666666666663" height="138.33333333333334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="saX-6r-GHM" appends="YES" id="uXm-jn-V9h"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x32-YW-wIO">
+                                <rect key="frame" x="339" y="148" width="34" height="138.33333333333334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6I-kn-dBc">
+                                <rect key="frame" x="20" y="296.33333333333326" width="34.333333333333336" height="152.33333333333334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G3l-KQ-NbY">
+                                <rect key="frame" x="55.333333333333485" y="296.33333333333326" width="282.33333333333326" height="152.33333333333334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7UM-Tf-zPy" appends="YES" id="mhX-dd-AEE"/>
+                                    <outletCollection property="gestureRecognizers" destination="7UM-Tf-zPy" appends="YES" id="6dT-oz-VQA"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gea-3Q-KUG">
+                                <rect key="frame" x="338.66666666666652" y="296.33333333333326" width="34.333333333333314" height="152.33333333333334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyg-au-OKH">
+                                <rect key="frame" x="20" y="458.66666666666674" width="34.333333333333336" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hCq-7e-gA2">
+                                <rect key="frame" x="55.333333333333485" y="458.66666666666674" width="282.33333333333326" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3cG-Vy-Spe" appends="YES" id="2Vv-Xq-wqk"/>
+                                    <outletCollection property="gestureRecognizers" destination="3cG-Vy-Spe" appends="YES" id="Z32-qe-bPb"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XU-Ln-gKW">
+                                <rect key="frame" x="338.66666666666652" y="458.66666666666674" width="34.333333333333314" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtv-fi-8lc">
+                                <rect key="frame" x="20" y="606.66666666666652" width="34.333333333333336" height="138.33333333333334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tzf-fJ-d8m">
+                                <rect key="frame" x="55.333333333333485" y="609.66666666666652" width="282.33333333333326" height="138.33333333333334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="W0g-yU-bjG" appends="YES" id="CZY-ju-hNa"/>
+                                    <outletCollection property="gestureRecognizers" destination="W0g-yU-bjG" appends="YES" id="5yz-Km-325"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7y-FJ-Utd">
+                                <rect key="frame" x="338.66666666666652" y="606.66666666666652" width="34.333333333333314" height="138.33333333333334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmH-44-PEf" userLabel="Log Out">
+                                <rect key="frame" x="16" y="103" width="85" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Log Out"/>
+                                <connections>
+                                    <action selector="onLogOutTapped:" destination="xXd-RL-TbQ" eventType="touchUpInside" id="deg-V6-2ps"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R3w-s2-eg5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="NQZ-1V-Lbc" firstAttribute="top" secondItem="R3w-s2-eg5" secondAttribute="top" constant="20" id="0Wa-bt-vCA"/>
-                            <constraint firstItem="R3w-s2-eg5" firstAttribute="bottom" secondItem="NQZ-1V-Lbc" secondAttribute="bottom" constant="20" id="FyW-Pt-uUU"/>
-                            <constraint firstItem="R3w-s2-eg5" firstAttribute="bottom" secondItem="NQZ-1V-Lbc" secondAttribute="bottom" constant="20" id="RKP-Ml-9jo"/>
-                            <constraint firstItem="NQZ-1V-Lbc" firstAttribute="leading" secondItem="R3w-s2-eg5" secondAttribute="leading" constant="20" id="kw2-WU-Vf0"/>
-                            <constraint firstItem="R3w-s2-eg5" firstAttribute="trailing" secondItem="NQZ-1V-Lbc" secondAttribute="trailing" constant="20" id="qZY-Ai-IHO"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Make an Outfit" image="tshirt" catalog="system" id="8y4-Xa-s97"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="01v-m0-LOR">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="gHb-Fa-OUA"/>
-                        <connections>
-                            <outlet property="titleView" destination="azy-qe-9rH" id="0Tb-xK-nVn"/>
-                        </connections>
-                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="Accessory" destination="XA5-Uz-Trk" id="ahZ-1p-onc"/>
@@ -264,51 +244,51 @@
                                 <rect key="frame" x="36" y="103" width="321" height="367"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BOJ-P8-wA0">
-                                        <rect key="frame" x="0.0" y="0.0" width="321" height="175"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="321" height="50"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="i8O-Yf-Xe6">
-                                        <rect key="frame" x="0.0" y="215" width="185" height="152"/>
+                                        <rect key="frame" x="0.0" y="90" width="185" height="277"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9Oa-m9-QnF" userLabel="Price">
-                                                <rect key="frame" x="0.0" y="0.0" width="131" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="75.666666666666671"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Price" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mzr-NJ-cS1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="75.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Zh-s8-PDK">
-                                                        <rect key="frame" x="99" y="0.0" width="32" height="34"/>
+                                                        <rect key="frame" x="99" y="0.0" width="32" height="75.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="w14-W3-OKn" userLabel="Store">
-                                                <rect key="frame" x="0.0" y="59" width="133" height="34"/>
+                                                <rect key="frame" x="0.0" y="100.66666666666669" width="133" height="75.666666666666686"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Store" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yvL-gd-Fv3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="75.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ijv-2N-t2T">
-                                                        <rect key="frame" x="101" y="0.0" width="32" height="34"/>
+                                                        <rect key="frame" x="101" y="0.0" width="32" height="75.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bDo-Lg-pBf" userLabel="Date Added">
-                                                <rect key="frame" x="0.0" y="118" width="185" height="34"/>
+                                                <rect key="frame" x="0.0" y="201.33333333333331" width="185" height="75.666666666666686"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date Added" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVF-o8-bmv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="123" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="123" height="75.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R54-ZP-9UM">
-                                                        <rect key="frame" x="153" y="0.0" width="32" height="34"/>
+                                                        <rect key="frame" x="153" y="0.0" width="32" height="75.666666666666671"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -340,7 +320,7 @@
         <!--Navigation Controller-->
         <scene sceneID="t3h-eI-okB">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sb8-BR-DX9" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sb8-BR-DX9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="reU-5P-noI">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
