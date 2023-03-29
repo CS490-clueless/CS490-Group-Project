@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private enum Constants {
-        static let loginNavigationControllerIdentifier = "LoginNavigationController"
+        static let loginNavigationControllerIdentifier = "LoginController"
         static let feedNavigationControllerIdentifier = "ViewController"
         static let storyboardIdentifier = "Main"
     }
