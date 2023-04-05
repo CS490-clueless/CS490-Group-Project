@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C80D74229DE2DDD005729F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C80D73F29DE2DDD005729F4 /* User.swift */; };
+		3C80D74329DE2DDD005729F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C80D74029DE2DDD005729F4 /* LoginViewController.swift */; };
+		3C80D74429DE2DDD005729F4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C80D74129DE2DDD005729F4 /* SignUpViewController.swift */; };
 		C963639C29CC0AAC007CCF7D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C963639B29CC0AAC007CCF7D /* Alamofire */; };
 		C963639F29CC0AEE007CCF7D /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = C963639E29CC0AEE007CCF7D /* AlamofireImage */; };
 		C9AA0D9E29B6B08C00AF102D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA0D9D29B6B08C00AF102D /* AppDelegate.swift */; };
@@ -15,13 +18,13 @@
 		C9AA0DA529B6B08C00AF102D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AA0DA329B6B08C00AF102D /* Main.storyboard */; };
 		C9AA0DA729B6B08D00AF102D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AA0DA629B6B08D00AF102D /* Assets.xcassets */; };
 		C9AA0DAA29B6B08D00AF102D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AA0DA829B6B08D00AF102D /* LaunchScreen.storyboard */; };
-		C9AA0DB229B94E6400AF102D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA0DB129B94E6400AF102D /* LoginViewController.swift */; };
 		C9AA0DB529B94EAB00AF102D /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C9AA0DB429B94EAB00AF102D /* ParseSwift */; };
-		C9AA0DB729B94EC600AF102D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA0DB629B94EC600AF102D /* User.swift */; };
-		C9AA0DB929B9553400AF102D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA0DB829B9553400AF102D /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C80D73F29DE2DDD005729F4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3C80D74029DE2DDD005729F4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3C80D74129DE2DDD005729F4 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C9AA0D9A29B6B08C00AF102D /* dapperling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dapperling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AA0D9D29B6B08C00AF102D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9AA0D9F29B6B08C00AF102D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,9 +33,6 @@
 		C9AA0DA629B6B08D00AF102D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9AA0DA929B6B08D00AF102D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9AA0DAB29B6B08D00AF102D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9AA0DB129B94E6400AF102D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "../../../../Downloads/lab-insta-parse 2/lab-insta-parse/Login/LoginViewController.swift"; sourceTree = "<group>"; };
-		C9AA0DB629B94EC600AF102D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "../../../../Downloads/lab-insta-parse 2/lab-insta-parse/Models/User.swift"; sourceTree = "<group>"; };
-		C9AA0DB829B9553400AF102D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = "../../../../Downloads/lab-insta-parse/lab-insta-parse/Login/SignUpViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +68,12 @@
 		C9AA0D9C29B6B08C00AF102D /* dapperling */ = {
 			isa = PBXGroup;
 			children = (
+				3C80D74029DE2DDD005729F4 /* LoginViewController.swift */,
+				3C80D74129DE2DDD005729F4 /* SignUpViewController.swift */,
+				3C80D73F29DE2DDD005729F4 /* User.swift */,
 				C9AA0D9D29B6B08C00AF102D /* AppDelegate.swift */,
 				C9AA0D9F29B6B08C00AF102D /* SceneDelegate.swift */,
 				C9AA0DA129B6B08C00AF102D /* ViewController.swift */,
-				C9AA0DB629B94EC600AF102D /* User.swift */,
-				C9AA0DB129B94E6400AF102D /* LoginViewController.swift */,
-				C9AA0DB829B9553400AF102D /* SignUpViewController.swift */,
 				C9AA0DA329B6B08C00AF102D /* Main.storyboard */,
 				C9AA0DA629B6B08D00AF102D /* Assets.xcassets */,
 				C9AA0DA829B6B08D00AF102D /* LaunchScreen.storyboard */,
@@ -163,11 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9AA0DB929B9553400AF102D /* SignUpViewController.swift in Sources */,
-				C9AA0DB229B94E6400AF102D /* LoginViewController.swift in Sources */,
+				3C80D74429DE2DDD005729F4 /* SignUpViewController.swift in Sources */,
+				3C80D74229DE2DDD005729F4 /* User.swift in Sources */,
 				C9AA0DA229B6B08C00AF102D /* ViewController.swift in Sources */,
 				C9AA0D9E29B6B08C00AF102D /* AppDelegate.swift in Sources */,
-				C9AA0DB729B94EC600AF102D /* User.swift in Sources */,
+				3C80D74329DE2DDD005729F4 /* LoginViewController.swift in Sources */,
 				C9AA0DA029B6B08C00AF102D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
