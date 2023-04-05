@@ -107,7 +107,7 @@
             </objects>
             <point key="canvasLocation" x="1916.7938931297708" y="-2.8169014084507045"/>
         </scene>
-        <!--Make an Outfit-->
+        <!--View Controller-->
         <scene sceneID="rDb-dz-wDu">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="xXd-RL-TbQ" customClass="ViewController" customModule="dapperling" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,13 +117,12 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYR-XF-oQA">
                                 <rect key="frame" x="20" y="148" width="34.333333333333336" height="138.33333333333334"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XA5-Uz-Trk">
-
+                                <rect key="frame" x="55" y="148" width="283" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -132,7 +131,6 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x32-YW-wIO">
                                 <rect key="frame" x="339" y="148" width="34" height="138.33333333333334"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
@@ -140,7 +138,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6I-kn-dBc">
                                 <rect key="frame" x="20" y="296.33333333333326" width="34.333333333333336" height="152.33333333333334"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
@@ -162,7 +159,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyg-au-OKH">
                                 <rect key="frame" x="20" y="458.66666666666674" width="34.333333333333336" height="138"/>
-
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
@@ -211,14 +207,21 @@
                                 <connections>
                                     <action selector="onLogOutTapped:" destination="xXd-RL-TbQ" eventType="touchUpInside" id="deg-V6-2ps"/>
                                 </connections>
-
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PM-Jm-EQ2">
+                                <rect key="frame" x="339" y="103" width="34" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+"/>
+                                <connections>
+                                    <segue destination="p1v-N1-88D" kind="show" id="sZn-Qp-98q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R3w-s2-eg5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <toolbarItems/>
-
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="Accessory" destination="XA5-Uz-Trk" id="ahZ-1p-onc"/>
@@ -235,7 +238,71 @@
                 <tapGestureRecognizer id="3cG-Vy-Spe" userLabel="Bottom"/>
                 <tapGestureRecognizer id="W0g-yU-bjG" userLabel="Shoes"/>
             </objects>
-            <point key="canvasLocation" x="5568.7022900763359" y="726.76056338028172"/>
+            <point key="canvasLocation" x="5515.2671755725187" y="726.76056338028172"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UUB-Eb-OCg">
+            <objects>
+                <viewController id="p1v-N1-88D" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gC8-Tb-i63">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E3u-jr-F60">
+                                <rect key="frame" x="36" y="103" width="321" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Price" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pa9-NC-6oA">
+                                <rect key="frame" x="36" y="262" width="69" height="59.666666666666664"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ua6-Tw-onb">
+                                <rect key="frame" x="135" y="262" width="32" height="59.666666666666664"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Store" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eZl-UO-pEJ">
+                                <rect key="frame" x="36" y="349" width="71" height="59.666666666666664"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HgV-gg-Eus">
+                                <rect key="frame" x="137" y="349" width="32" height="59.666666666666664"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date Added" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMc-st-F2J">
+                                <rect key="frame" x="36" y="440" width="123" height="59.666666666666664"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lfY-lR-mWl">
+                                <rect key="frame" x="189" y="440" width="32" height="59.666666666666664"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obL-4T-1Rn">
+                                <rect key="frame" x="147" y="685" width="98" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add Item!"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JdQ-we-JM3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eTz-Qw-MnQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x4L-U2-Kd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5515" y="1435"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Jb5-qO-fZW">
@@ -249,51 +316,51 @@
                                 <rect key="frame" x="36" y="103" width="321" height="367"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BOJ-P8-wA0">
-                                        <rect key="frame" x="0.0" y="0.0" width="321" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="321" height="98"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="i8O-Yf-Xe6">
-                                        <rect key="frame" x="0.0" y="90" width="185" height="277"/>
+                                        <rect key="frame" x="0.0" y="138" width="185" height="229"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9Oa-m9-QnF" userLabel="Price">
-                                                <rect key="frame" x="0.0" y="0.0" width="131" height="75.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="59.666666666666664"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Price" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mzr-NJ-cS1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="75.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="59.666666666666664"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Zh-s8-PDK">
-                                                        <rect key="frame" x="99" y="0.0" width="32" height="75.666666666666671"/>
+                                                        <rect key="frame" x="99" y="0.0" width="32" height="59.666666666666664"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="w14-W3-OKn" userLabel="Store">
-                                                <rect key="frame" x="0.0" y="100.66666666666669" width="133" height="75.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="84.666666666666686" width="133" height="59.666666666666657"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Store" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yvL-gd-Fv3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="75.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="59.666666666666664"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ijv-2N-t2T">
-                                                        <rect key="frame" x="101" y="0.0" width="32" height="75.666666666666671"/>
+                                                        <rect key="frame" x="101" y="0.0" width="32" height="59.666666666666664"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bDo-Lg-pBf" userLabel="Date Added">
-                                                <rect key="frame" x="0.0" y="201.33333333333331" width="185" height="75.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="169.33333333333331" width="185" height="59.666666666666657"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date Added" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVF-o8-bmv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="123" height="75.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="123" height="59.666666666666664"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R54-ZP-9UM">
-                                                        <rect key="frame" x="153" y="0.0" width="32" height="75.666666666666671"/>
+                                                        <rect key="frame" x="153" y="0.0" width="32" height="59.666666666666664"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
