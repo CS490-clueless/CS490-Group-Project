@@ -10,8 +10,10 @@ import ParseSwift
 
 class ViewController: UIViewController {
 
-
-
+    static var accessoryArray = [Clothing]()
+    static var topArray = [Clothing]()
+    static var bottomArray = [Clothing]()
+    static var shoesArray = [Clothing]()
     
     @IBOutlet weak var Accessory: UIImageView! {
         didSet {

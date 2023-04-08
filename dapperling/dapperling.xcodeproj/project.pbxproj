@@ -14,6 +14,7 @@
 		3C80D74429DE2DDD005729F4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C80D74129DE2DDD005729F4 /* SignUpViewController.swift */; };
 		C963639C29CC0AAC007CCF7D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C963639B29CC0AAC007CCF7D /* Alamofire */; };
 		C963639F29CC0AEE007CCF7D /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = C963639E29CC0AEE007CCF7D /* AlamofireImage */; };
+		C9A9B2DE29E207B600B19915 /* Clothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A9B2DD29E207B600B19915 /* Clothing.swift */; };
 		C9AA0D9E29B6B08C00AF102D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA0D9D29B6B08C00AF102D /* AppDelegate.swift */; };
 		C9AA0DA029B6B08C00AF102D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA0D9F29B6B08C00AF102D /* SceneDelegate.swift */; };
 		C9AA0DA229B6B08C00AF102D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA0DA129B6B08C00AF102D /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 		3C80D73F29DE2DDD005729F4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3C80D74029DE2DDD005729F4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C80D74129DE2DDD005729F4 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C9A9B2DD29E207B600B19915 /* Clothing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clothing.swift; sourceTree = "<group>"; };
 		C9AA0D9A29B6B08C00AF102D /* dapperling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dapperling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AA0D9D29B6B08C00AF102D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9AA0D9F29B6B08C00AF102D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				C9AA0D9F29B6B08C00AF102D /* SceneDelegate.swift */,
 				C9AA0DA129B6B08C00AF102D /* ViewController.swift */,
 				C9AA0DA329B6B08C00AF102D /* Main.storyboard */,
+				C9A9B2DD29E207B600B19915 /* Clothing.swift */,
 				3C69976E29DE39710023F985 /* AddViewController.swift */,
 				C9AA0DA629B6B08D00AF102D /* Assets.xcassets */,
 				C9AA0DA829B6B08D00AF102D /* LaunchScreen.storyboard */,
@@ -176,6 +179,7 @@
 				C9AA0D9E29B6B08C00AF102D /* AppDelegate.swift in Sources */,
 				3C69977329E1FE1F0023F985 /* ClosetCell.swift in Sources */,
 				3C80D74329DE2DDD005729F4 /* LoginViewController.swift in Sources */,
+				C9A9B2DE29E207B600B19915 /* Clothing.swift in Sources */,
 				C9AA0DA029B6B08C00AF102D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

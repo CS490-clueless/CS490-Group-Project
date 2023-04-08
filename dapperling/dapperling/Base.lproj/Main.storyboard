@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PHT-Gh-EEA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PHT-Gh-EEA">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -276,6 +275,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add Item!"/>
+                                <connections>
+                                    <action selector="addItemPressed:" destination="p1v-N1-88D" eventType="touchUpInside" id="kHw-me-alK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbM-Mf-WLe">
                                 <rect key="frame" x="36" y="580" width="169" height="35"/>
@@ -329,7 +331,11 @@
                     <navigationItem key="navigationItem" id="eTz-Qw-MnQ"/>
                     <connections>
                         <outlet property="PopUpButton" destination="gbM-Mf-WLe" id="iIK-xw-n2K"/>
+                        <outlet property="articleButton" destination="gbM-Mf-WLe" id="mEc-IM-enS"/>
+                        <outlet property="dateText" destination="lfY-lR-mWl" id="qcL-BC-k7W"/>
                         <outlet property="previewImage" destination="E3u-jr-F60" id="v0a-SL-MgF"/>
+                        <outlet property="priceText" destination="ua6-Tw-onb" id="DWA-0l-J8J"/>
+                        <outlet property="storeText" destination="HgV-gg-Eus" id="A5I-JB-ssL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x4L-U2-Kd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
