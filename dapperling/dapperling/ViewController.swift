@@ -10,6 +10,9 @@ import ParseSwift
 
 class ViewController: UIViewController {
 
+
+
+    
     @IBOutlet weak var Accessory: UIImageView! {
         didSet {
             Accessory.isUserInteractionEnabled = true
@@ -22,6 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func onLogOutTapped(_ sender: Any) {

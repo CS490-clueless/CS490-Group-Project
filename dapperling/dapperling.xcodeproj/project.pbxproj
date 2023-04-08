@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C69976F29DE39710023F985 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C69976E29DE39710023F985 /* AddViewController.swift */; };
+		3C69977329E1FE1F0023F985 /* ClosetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C69977229E1FE1F0023F985 /* ClosetCell.swift */; };
 		3C80D74229DE2DDD005729F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C80D73F29DE2DDD005729F4 /* User.swift */; };
 		3C80D74329DE2DDD005729F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C80D74029DE2DDD005729F4 /* LoginViewController.swift */; };
 		3C80D74429DE2DDD005729F4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C80D74129DE2DDD005729F4 /* SignUpViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C69976E29DE39710023F985 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		3C69977229E1FE1F0023F985 /* ClosetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetCell.swift; sourceTree = "<group>"; };
 		3C80D73F29DE2DDD005729F4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3C80D74029DE2DDD005729F4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C80D74129DE2DDD005729F4 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -70,11 +74,13 @@
 			children = (
 				3C80D74029DE2DDD005729F4 /* LoginViewController.swift */,
 				3C80D74129DE2DDD005729F4 /* SignUpViewController.swift */,
+				3C69977229E1FE1F0023F985 /* ClosetCell.swift */,
 				3C80D73F29DE2DDD005729F4 /* User.swift */,
 				C9AA0D9D29B6B08C00AF102D /* AppDelegate.swift */,
 				C9AA0D9F29B6B08C00AF102D /* SceneDelegate.swift */,
 				C9AA0DA129B6B08C00AF102D /* ViewController.swift */,
 				C9AA0DA329B6B08C00AF102D /* Main.storyboard */,
+				3C69976E29DE39710023F985 /* AddViewController.swift */,
 				C9AA0DA629B6B08D00AF102D /* Assets.xcassets */,
 				C9AA0DA829B6B08D00AF102D /* LaunchScreen.storyboard */,
 				C9AA0DAB29B6B08D00AF102D /* Info.plist */,
@@ -165,8 +171,10 @@
 			files = (
 				3C80D74429DE2DDD005729F4 /* SignUpViewController.swift in Sources */,
 				3C80D74229DE2DDD005729F4 /* User.swift in Sources */,
+				3C69976F29DE39710023F985 /* AddViewController.swift in Sources */,
 				C9AA0DA229B6B08C00AF102D /* ViewController.swift in Sources */,
 				C9AA0D9E29B6B08C00AF102D /* AppDelegate.swift in Sources */,
+				3C69977329E1FE1F0023F985 /* ClosetCell.swift in Sources */,
 				3C80D74329DE2DDD005729F4 /* LoginViewController.swift in Sources */,
 				C9AA0DA029B6B08C00AF102D /* SceneDelegate.swift in Sources */,
 			);
