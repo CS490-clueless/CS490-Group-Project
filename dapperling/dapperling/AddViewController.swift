@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddViewController: UIViewController {
+class AddViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,26 @@ class AddViewController: UIViewController {
         PopUpButton.showsMenuAsPrimaryAction = true
         PopUpButton.changesSelectionAsPrimaryAction = true
     }
+    
+    @IBOutlet weak var previewImage: UIImageView!
+    
+    @IBAction func chooseImage(_ sender: Any) {
+        let imagePickerVC = UIImagePickerController()
+                imagePickerVC.sourceType = .photoLibrary
+                imagePickerVC.delegate = self // new
+                present(imagePickerVC, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+
+        if let image = info[.originalImage] as? UIImage {
+            previewImage.image = image
+        }
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
