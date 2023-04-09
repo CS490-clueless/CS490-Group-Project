@@ -9,6 +9,7 @@ import UIKit
 import ParseSwift
 import Alamofire
 import AlamofireImage
+import Firebase
 
 class ViewController: UIViewController {
     
@@ -42,7 +43,7 @@ class ViewController: UIViewController {
         didSet {
             Top.isUserInteractionEnabled = true
             if ViewController.topIndex != 0 {
-                if let imageURL = ViewController.topArray[ViewController.topIndex].imageFile?.url{
+                if let imageURL = ViewController.topArray[ViewController.topIndex].imageFile{
                     imageDataRequest = AF.request(imageURL).responseImage { [weak self] response in
                         switch response.result {
                         case .success(let image):
@@ -65,7 +66,7 @@ class ViewController: UIViewController {
         didSet {
             Bottom.isUserInteractionEnabled = true
             if ViewController.bottomIndex != 0 {
-                if let imageURL = ViewController.bottomArray[ViewController.bottomIndex].imageFile?.url {
+                if let imageURL = ViewController.bottomArray[ViewController.bottomIndex].imageFile{
                     imageDataRequest = AF.request(imageURL).responseImage { [weak self] response in
                         switch response.result {
                         case .success(let image):
@@ -88,7 +89,7 @@ class ViewController: UIViewController {
         didSet {
             Shoes.isUserInteractionEnabled = true
             if ViewController.shoesIndex != 0 {
-                if let imageURL = ViewController.shoesArray[ViewController.shoesIndex].imageFile?.url {
+                if let imageURL = ViewController.shoesArray[ViewController.shoesIndex].imageFile{
                     imageDataRequest = AF.request(imageURL).responseImage { [weak self] response in
                         switch response.result {
                         case .success(let image):
@@ -119,20 +120,15 @@ class ViewController: UIViewController {
         
         if ViewController.accessoryIndex != 0 {
             print(ViewController.accessoryArray[ViewController.accessoryIndex - 1].price)
-            if let imageURL =  ViewController.accessoryArray[ViewController.accessoryIndex - 1].imageFile?.url{
-                print(imageURL)
-                AF.request(imageURL, method: .get).response{ response in
-                    
-                    switch response.result {
-                    case .success(let responseData):
-                        self.Accessory.image = UIImage(data: responseData!, scale:1)
-                        
-                    case .failure(let error):
-                        print("error--->",error)
-                    }
-                }
+            print(ViewController.accessoryArray[ViewController.accessoryIndex - 1].imageFile)
+            if let imageURL =  ViewController.accessoryArray[ViewController.accessoryIndex - 1].imageFile, let url = URL(string: imageURL) {
+                Accessory.af.setImage(withURL: url)
+                
+                
             }
-            
+        }
+    }
+
             
 //            let imageURL = URL(string: "https://parsefiles.back4app.com/VrmslyE8hYXfRM3HuiRK8YO97qPIqx2BzqzFqJ0m/d694fb0803afeb5ec38aaef52c5c8af0_image.jpg")! {
 //                imageDataRequest = AF.request(imageURL).responseImage { [weak self] response in
@@ -146,8 +142,7 @@ class ViewController: UIViewController {
 //                    }
 //                }
 //            }
-        }
-    }
+
     
     
     @IBAction func accessoryLeft(_ sender: Any) {
@@ -158,7 +153,7 @@ class ViewController: UIViewController {
         }
         
         if ViewController.accessoryIndex != 0 {
-            if let imageURL =  ViewController.accessoryArray[ViewController.accessoryIndex - 1].imageFile?.url{
+            if let imageURL =  ViewController.accessoryArray[ViewController.accessoryIndex - 1].imageFile{
                 print(imageURL)
                 AF.request(imageURL as URLConvertible, method: .get).response{ response in
                     
@@ -206,7 +201,7 @@ class ViewController: UIViewController {
         }
         
         if ViewController.topIndex != 0 {
-            if let imageURL =  ViewController.topArray[ViewController.topIndex - 1].imageFile?.url{
+            if let imageURL =  ViewController.topArray[ViewController.topIndex - 1].imageFile{
                 print(imageURL)
                 AF.request(imageURL, method: .get).response{ response in
                     
@@ -231,7 +226,7 @@ class ViewController: UIViewController {
         }
         
         if ViewController.topIndex != 0 {
-            if let imageURL =  ViewController.bottomArray[ViewController.bottomIndex - 1].imageFile?.url{
+            if let imageURL =  ViewController.bottomArray[ViewController.bottomIndex - 1].imageFile{
                 print(imageURL)
                 AF.request(imageURL, method: .get).response{ response in
                     
@@ -255,7 +250,7 @@ class ViewController: UIViewController {
         }
         
         if ViewController.topIndex != 0 {
-            if let imageURL =  ViewController.bottomArray[ViewController.bottomIndex - 1].imageFile?.url{
+            if let imageURL =  ViewController.bottomArray[ViewController.bottomIndex - 1].imageFile{
                 print(imageURL)
                 AF.request(imageURL, method: .get).response{ response in
                     
@@ -281,7 +276,7 @@ class ViewController: UIViewController {
         }
         
         if ViewController.shoesIndex != 0 {
-            if let imageURL =  ViewController.shoesArray[ViewController.shoesIndex - 1].imageFile?.url{
+            if let imageURL =  ViewController.shoesArray[ViewController.shoesIndex - 1].imageFile{
                 print(imageURL)
                 AF.request(imageURL, method: .get).response{ response in
                     
@@ -305,7 +300,7 @@ class ViewController: UIViewController {
         }
         
         if ViewController.shoesIndex != 0 {
-            if let imageURL =  ViewController.shoesArray[ViewController.shoesIndex - 1].imageFile?.url{
+            if let imageURL =  ViewController.shoesArray[ViewController.shoesIndex - 1].imageFile{
                 print(imageURL)
                 AF.request(imageURL, method: .get).response{ response in
                     
@@ -334,8 +329,20 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onLogOutTapped(_ sender: Any) {
-        print("logout pressed")
-        showConfirmLogoutAlert()
+        do {
+            try Firebase.Auth.auth().signOut()
+        }
+        catch {
+            print("No user signed in!")
+        }
+        
+        let main = UIStoryboard(name:"Main", bundle:nil)
+        let loginViewController = main.instantiateViewController(withIdentifier: "loginViewController")
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let delegate = windowScene.delegate as? SceneDelegate else {return}
+        
+        delegate.window?.rootViewController = loginViewController
+//        print("logout pressed")
+//        showConfirmLogoutAlert()
     }
     
     private func showConfirmLogoutAlert() {
@@ -376,55 +383,7 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "detailSegue", sender: tappedView)
         }
     }
-    
-    private func queryPosts(completion: (() -> Void)? = nil) {
-        
-        let query = Clothing.query()
-        
-        //let poopoo = try? await query.findAll() // Executes the query synchronously
-        
-        query.find{ [weak self] result in // Executes the query asynchronously
-            switch result {
-                case .success(let clothingURL):
-                if let imageFile = clothingURL.imageFile,
-                    let imageURL = imageFile.url {
-                        ViewController.accessoryURL.append(imageURL)
-                    }
-                case .failure(let error):
-                print("i hate this project")
-            }
-            print("i die")
-          //  if let imageFile = self.imageFile
-            
-            // Handle the result (of type Result<[Profile], ParseError>)
-            //switch result {
-//                //case .success(let clothingURL):
-//                    if let imageFile = clothingURL.imageFile,
-//                       let imageURL = imageFile.url {
-//                        ViewController.accessoryURL.append(imageURL)
-//                    }
-//                //case .failure(let error):
-//                    print("i hate this project")
-//                }
-        }
-        
-        //        query.find { [weak self] result in
-        //            switch result {
-        //            case .success(let clothingURL):
-        //                if let imageFile = clothingURL.imageFile,
-        //                    let imageURL = imageFile.url {
-        //                    ViewController.accessoryURL.append(imageURL)
-        //                }
-        //            case .failure(let error):
-        //                print("i hate this project")
-        //            }
-        //        }
-        
-
-        
-        completion?()
-        
-    }
-    
 }
+    
+
 

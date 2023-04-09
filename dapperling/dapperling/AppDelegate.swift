@@ -7,6 +7,7 @@
 
 import UIKit
 import ParseSwift
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ParseSwift.initialize(applicationId: "VrmslyE8hYXfRM3HuiRK8YO97qPIqx2BzqzFqJ0m",
                               clientKey: "SK9PaCdfsuxcGpjp8cU2AtiFGqMUZlCXf2Q626Dz",
                               serverURL: URL(string: "https://parseapi.back4app.com")!)
+        
+        FirebaseApp.configure()
         
 //        // Instantiate the test parse object
 //        var score = GameScore()

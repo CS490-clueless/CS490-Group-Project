@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PHT-Gh-EEA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PHT-Gh-EEA">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -101,6 +102,7 @@
                     <connections>
                         <outlet property="passwordField" destination="apf-FW-LvZ" id="PUw-90-F57"/>
                         <outlet property="usernameField" destination="4B9-uU-DO8" id="g1y-4h-ie7"/>
+                        <segue destination="xXd-RL-TbQ" kind="show" identifier="loginSegue" id="PlU-zx-PSJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXg-We-sTT" sceneMemberID="firstResponder"/>
@@ -369,7 +371,7 @@
                         <outlet property="PopUpButton" destination="gbM-Mf-WLe" id="iIK-xw-n2K"/>
                         <outlet property="articleButton" destination="gbM-Mf-WLe" id="mEc-IM-enS"/>
                         <outlet property="dateText" destination="lfY-lR-mWl" id="qcL-BC-k7W"/>
-                        <outlet property="previewImage" destination="E3u-jr-F60" id="v0a-SL-MgF"/>
+                        <outlet property="previewImage" destination="E3u-jr-F60" id="LHn-BY-hHs"/>
                         <outlet property="priceText" destination="ua6-Tw-onb" id="DWA-0l-J8J"/>
                         <outlet property="storeText" destination="HgV-gg-Eus" id="A5I-JB-ssL"/>
                     </connections>
@@ -491,6 +493,9 @@
                                                 <rect key="frame" x="0.0" y="40.666666666666657" width="345" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <segue destination="xXd-RL-TbQ" kind="show" identifier="SignUpSegue" id="TTd-RV-cRP"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="86q-Lm-PTF">
                                                 <rect key="frame" x="0.0" y="86.666666666666657" width="345" height="34"/>
@@ -651,6 +656,9 @@
             <point key="canvasLocation" x="4059" y="1482"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PlU-zx-PSJ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="folder.fill" catalog="system" width="128" height="96"/>
         <image name="tshirt" catalog="system" width="128" height="98"/>
