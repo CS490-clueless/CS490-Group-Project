@@ -245,7 +245,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Ohn-UQ-F4b">
-                        <barButtonItem key="rightBarButtonItem" title="Save Outfit!" id="o2i-qN-8Qz"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save Outfit!" id="o2i-qN-8Qz">
+                            <connections>
+                                <action selector="saveOutfitTapped:" destination="xXd-RL-TbQ" id="kPX-a8-hTY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

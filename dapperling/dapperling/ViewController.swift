@@ -249,6 +249,12 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func saveOutfitTapped(_ sender: Any) {
+        let alertController = UIAlertController(title: "Outfit Saved!", message: nil, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
+    }
     
     
     
