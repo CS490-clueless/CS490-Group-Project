@@ -51,18 +51,18 @@ class AddViewController: UIViewController{
         }
         newClothing.imageFile = ParseFile(name: "image.jpg", data: imageData)
         
-        if typeString! == "Accessory" {
-            ViewController.accessoryArray.append(newClothing)
-        }
-        if typeString! == "Top" {
-            ViewController.topArray.append(newClothing)
-        }
-        if typeString! == "Bottom" {
-            ViewController.bottomArray.append(newClothing)
-        }
-        if typeString! == "Shoes" {
-            ViewController.shoesArray.append(newClothing)
-        }
+//        if typeString! == "Accessory" {
+//            ViewController.accessoryArray.append(newClothing)
+//        }
+//        if typeString! == "Top" {
+//            ViewController.topArray.append(newClothing)
+//        }
+//        if typeString! == "Bottom" {
+//            ViewController.bottomArray.append(newClothing)
+//        }
+//        if typeString! == "Shoes" {
+//            ViewController.shoesArray.append(newClothing)
+//        }
         
         
         
@@ -83,19 +83,19 @@ class AddViewController: UIViewController{
                 }
             }
         }
-        
-        if typeString! == "Accessory" {
-            ViewController.accessoryArray.append(newClothing)
-        }
-        if typeString! == "Top" {
-            ViewController.topArray.append(newClothing)
-        }
-        if typeString! == "Bottom" {
-            ViewController.bottomArray.append(newClothing)
-        }
-        if typeString! == "Shoes" {
-            ViewController.shoesArray.append(newClothing)
-        }
+//
+//        if typeString! == "Accessory" {
+//            ViewController.accessoryArray.append(newClothing)
+//        }
+//        if typeString! == "Top" {
+//            ViewController.topArray.append(newClothing)
+//        }
+//        if typeString! == "Bottom" {
+//            ViewController.bottomArray.append(newClothing)
+//        }
+//        if typeString! == "Shoes" {
+//            ViewController.shoesArray.append(newClothing)
+//        }
         
     }
     

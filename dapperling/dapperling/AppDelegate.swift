@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                               clientKey: "SK9PaCdfsuxcGpjp8cU2AtiFGqMUZlCXf2Q626Dz",
                               serverURL: URL(string: "https://parseapi.back4app.com")!)
         
+        
 //        // Instantiate the test parse object
 //        var score = GameScore()
 //        score.playerName = "Kingsley"
