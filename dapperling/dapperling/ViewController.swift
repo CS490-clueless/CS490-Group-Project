@@ -63,14 +63,14 @@ class ViewController: UIViewController {
     
     
     @IBAction func accessoryRight(_ sender: Any) {
-        if (accessoryIndex < accessoryArray.count - 1) {
+        if (accessoryIndex < (accessoryArray.count)) {
             accessoryIndex += 1
         } else {
-            accessoryIndex = 0
+            accessoryIndex = 1
         }
         
         if accessoryIndex != 0 {
-            AF.request(accessoryURL[accessoryIndex - 1], method: .get).response { response in
+            AF.request(accessoryURL[(accessoryIndex - 1)], method: .get).response { response in
                 switch response.result {
                 case .success(let responseData):
                         self.Accessory.image = UIImage(data: responseData!, scale:1)
@@ -99,10 +99,10 @@ class ViewController: UIViewController {
     
     
     @IBAction func accessoryLeft(_ sender: Any) {
-        if accessoryIndex > 0 {
+        if accessoryIndex > 1 {
             accessoryIndex -= 1
         } else {
-            accessoryIndex = accessoryArray.count - 1
+            accessoryIndex = accessoryArray.count
         }
         
         if accessoryIndex != 0 {
@@ -120,13 +120,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func topRight(_ sender: Any) {
-        if (topIndex < topArray.count - 1) {
+        if (topIndex < topArray.count) {
             topIndex += 1
         } else {
-            topIndex = 0
+            topIndex = 1
         }
         
-        if topIndex != 0 {
+        if topArray.count != 0 {
             AF.request(topURL[topIndex - 1], method: .get).response { response in
                 switch response.result {
                 case .success(let responseData):
@@ -141,10 +141,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func topLeft(_ sender: Any) {
-        if topIndex > 0 {
+        if topIndex > 1 {
             topIndex -= 1
         } else {
-            topIndex = topArray.count - 1
+            topIndex = topArray.count
         }
         
         if topIndex != 0 {
@@ -163,10 +163,10 @@ class ViewController: UIViewController {
     
     
     @IBAction func bottomRight(_ sender: Any) {
-        if bottomIndex < bottomArray.count - 1 {
+        if bottomIndex < bottomArray.count {
             bottomIndex += 1
         } else {
-            bottomIndex = 0
+            bottomIndex = 1
         }
         
         if bottomIndex != 0 {
@@ -184,10 +184,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func bottomLeft(_ sender: Any) {
-        if bottomIndex > 0 {
+        if bottomIndex > 1 {
             bottomIndex -= 1
         } else {
-            bottomIndex = bottomArray.count - 1
+            bottomIndex = bottomArray.count
         }
         
         if bottomIndex != 0 {
@@ -207,10 +207,10 @@ class ViewController: UIViewController {
     
     
     @IBAction func shoesRight(_ sender: Any) {
-        if shoesIndex < shoesArray.count - 1{
+        if shoesIndex < shoesArray.count{
            shoesIndex += 1
         } else {
-            shoesIndex = 0
+            shoesIndex = 1
         }
         
         if shoesIndex != 0 {
@@ -228,10 +228,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func shoesLeft(_ sender: Any) {
-        if shoesIndex > 0 {
+        if shoesIndex > 1 {
            shoesIndex -= 1
         } else {
-            shoesIndex = shoesArray.count - 1
+            shoesIndex = shoesArray.count
         }
         
         if shoesIndex != 0 {
@@ -263,8 +263,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //queryPosts()
-        print(accessoryArray.count)
+       // queryPosts()
+//        accessoryIndex = 0
+//        topIndex = 0
+//        bottomIndex = 0
+//        shoesIndex = 0
+       // print(accessoryArray.count)
     }
 
     @IBAction func onLogOutTapped(_ sender: Any) {
@@ -386,6 +390,10 @@ class ViewController: UIViewController {
                     
                 }
                 print(clothing.count)
+                accessoryIndex = 0
+                topIndex = 0
+                bottomIndex = 0
+                shoesIndex = 0
                 print("yeehaw")
             case .failure(let error):
                 print("i hate this project")
