@@ -26,4 +26,5 @@ struct Clothing: ParseObject {
     var date: String?
     var type: String?
     var imageFile: ParseFile?
+    
 }

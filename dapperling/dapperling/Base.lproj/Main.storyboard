@@ -120,6 +120,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                                <connections>
+                                    <action selector="accessoryLeft:" destination="xXd-RL-TbQ" eventType="touchUpInside" id="0Bv-7b-CeK"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XA5-Uz-Trk">
                                 <rect key="frame" x="55" y="148" width="283" height="138"/>
@@ -135,12 +138,18 @@
                                 <gestureRecognizers/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                                <connections>
+                                    <action selector="accessoryRight:" destination="xXd-RL-TbQ" eventType="touchUpInside" id="DmY-TG-N4a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6I-kn-dBc">
                                 <rect key="frame" x="20" y="296.33333333333326" width="34.333333333333336" height="152.33333333333334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                                <connections>
+                                    <action selector="topLeft:" destination="xXd-RL-TbQ" eventType="touchUpInside" id="zpK-u4-lfk"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G3l-KQ-NbY">
                                 <rect key="frame" x="55.333333333333485" y="296.33333333333326" width="282.33333333333326" height="152.33333333333334"/>
@@ -148,7 +157,6 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="7UM-Tf-zPy" appends="YES" id="mhX-dd-AEE"/>
-                                    <outletCollection property="gestureRecognizers" destination="7UM-Tf-zPy" appends="YES" id="6dT-oz-VQA"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gea-3Q-KUG">
@@ -156,12 +164,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                                <connections>
+                                    <action selector="topRight:" destination="xXd-RL-TbQ" eventType="touchUpInside" id="bTM-Tg-ym6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyg-au-OKH">
                                 <rect key="frame" x="20" y="458.66666666666674" width="34.333333333333336" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                                <connections>
+                                    <action selector="bottomLeft:" destination="xXd-RL-TbQ" eventType="touchUpInside" id="Dyk-Jn-Xb7"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hCq-7e-gA2">
                                 <rect key="frame" x="55.333333333333485" y="458.66666666666674" width="282.33333333333326" height="138"/>
@@ -169,7 +183,6 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="3cG-Vy-Spe" appends="YES" id="2Vv-Xq-wqk"/>
-                                    <outletCollection property="gestureRecognizers" destination="3cG-Vy-Spe" appends="YES" id="Z32-qe-bPb"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XU-Ln-gKW">
@@ -177,12 +190,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                                <connections>
+                                    <action selector="bottomRight:" destination="xXd-RL-TbQ" eventType="touchUpInside" id="jxn-2A-Qtk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtv-fi-8lc">
                                 <rect key="frame" x="20" y="606.66666666666652" width="34.333333333333336" height="138.33333333333334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                                <connections>
+                                    <action selector="shoesLeft:" destination="xXd-RL-TbQ" eventType="touchUpInside" id="bRl-me-FRt"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tzf-fJ-d8m">
                                 <rect key="frame" x="55.333333333333485" y="609.66666666666652" width="282.33333333333326" height="138.33333333333334"/>
@@ -190,7 +209,6 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="W0g-yU-bjG" appends="YES" id="CZY-ju-hNa"/>
-                                    <outletCollection property="gestureRecognizers" destination="W0g-yU-bjG" appends="YES" id="5yz-Km-325"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7y-FJ-Utd">
@@ -198,6 +216,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                                <connections>
+                                    <action selector="shoesRight:" destination="xXd-RL-TbQ" eventType="touchUpInside" id="hKg-5x-7O8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmH-44-PEf" userLabel="Log Out">
                                 <rect key="frame" x="16" y="103" width="85" height="35"/>
@@ -226,6 +247,9 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="Accessory" destination="XA5-Uz-Trk" id="ahZ-1p-onc"/>
+                        <outlet property="Bottom" destination="hCq-7e-gA2" id="KVZ-Ew-fCq"/>
+                        <outlet property="Shoes" destination="tzf-fJ-d8m" id="DZA-sa-Ime"/>
+                        <outlet property="Top" destination="G3l-KQ-NbY" id="YN3-ND-xfR"/>
                         <segue destination="Gqt-J8-DY9" kind="show" identifier="detailSegue" id="9sj-8I-eKj"/>
                     </connections>
                 </viewController>
@@ -235,9 +259,21 @@
                         <action selector="accessoryTapped:" destination="xXd-RL-TbQ" id="Ohs-Tz-8IJ"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="7UM-Tf-zPy" userLabel="Top"/>
-                <tapGestureRecognizer id="3cG-Vy-Spe" userLabel="Bottom"/>
-                <tapGestureRecognizer id="W0g-yU-bjG" userLabel="Shoes"/>
+                <tapGestureRecognizer id="7UM-Tf-zPy" userLabel="Top">
+                    <connections>
+                        <action selector="topTapped:" destination="xXd-RL-TbQ" id="7YG-Pf-5Fo"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3cG-Vy-Spe" userLabel="Bottom">
+                    <connections>
+                        <action selector="bottomTapped:" destination="xXd-RL-TbQ" id="hEo-Di-Cva"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="W0g-yU-bjG" userLabel="Shoes">
+                    <connections>
+                        <action selector="shoesTapped:" destination="xXd-RL-TbQ" id="igK-gW-lnI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="5515.2671755725187" y="726.76056338028172"/>
         </scene>

@@ -1,4 +1,4 @@
-//
+
 //  AddViewController.swift
 //  dapperling
 //
@@ -64,6 +64,8 @@ class AddViewController: UIViewController{
             ViewController.shoesArray.append(newClothing)
         }
         
+        
+        
         // Save object in background (async)
         newClothing.save { [weak self] result in
             
@@ -81,6 +83,20 @@ class AddViewController: UIViewController{
                 }
             }
         }
+        
+        if typeString! == "Accessory" {
+            ViewController.accessoryArray.append(newClothing)
+        }
+        if typeString! == "Top" {
+            ViewController.topArray.append(newClothing)
+        }
+        if typeString! == "Bottom" {
+            ViewController.bottomArray.append(newClothing)
+        }
+        if typeString! == "Shoes" {
+            ViewController.shoesArray.append(newClothing)
+        }
+        
     }
     
     
