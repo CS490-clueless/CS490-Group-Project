@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     var bottomURL = [URL]()
     var shoesURL = [URL]()
     
+    var buttonPressed = 0
+    
     private var imageDataRequest: DataRequest?
     
     @IBOutlet weak var Accessory: UIImageView! {
@@ -278,12 +280,14 @@ class ViewController: UIViewController {
     
     
     @IBAction func accessoryTapped(_ sender: UITapGestureRecognizer) {
+        buttonPressed = 1
         if let tappedView = sender.view {
             performSegue(withIdentifier: "detailSegue", sender: tappedView)
         }
     }
     
     @IBAction func topTapped(_ sender: UITapGestureRecognizer) {
+        buttonPressed = 2
         if let tappedView = sender.view {
             performSegue(withIdentifier: "detailSegue", sender: tappedView)
         }
@@ -291,6 +295,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func bottomTapped(_ sender: UITapGestureRecognizer) {
+        buttonPressed = 3
         if let tappedView = sender.view {
             performSegue(withIdentifier: "detailSegue", sender: tappedView)
         }
@@ -298,8 +303,34 @@ class ViewController: UIViewController {
     
     
     @IBAction func shoesTapped(_ sender: UITapGestureRecognizer) {
+        buttonPressed = 4
         if let tappedView = sender.view {
             performSegue(withIdentifier: "detailSegue", sender: tappedView)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "detailSegue",
+            //let tappedView = sender as? UIView,
+            let detailViewController = segue.destination as? DetailViewController {
+
+            if buttonPressed == 1 {
+                detailViewController.info = accessoryArray[accessoryIndex - 1]
+                detailViewController.url = accessoryURL[accessoryIndex - 1]
+            } else if buttonPressed == 2 {
+                detailViewController.info = topArray[topIndex - 1]
+                detailViewController.url = topURL[topIndex - 1]
+                print("yoohee")
+            } else if buttonPressed == 3 {
+                detailViewController.info = bottomArray[bottomIndex - 1]
+                detailViewController.url = bottomURL[bottomIndex - 1]
+            } else if  buttonPressed == 4 {
+                detailViewController.info = shoesArray[shoesIndex - 1]
+                detailViewController.url = shoesURL[shoesIndex - 1]
+            } else {
+                print("no button was tapped, please check your selection.")
+            }
         }
     }
     
