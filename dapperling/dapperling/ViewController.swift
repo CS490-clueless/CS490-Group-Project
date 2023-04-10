@@ -35,7 +35,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var Accessory: UIImageView! {
         didSet {
             Accessory.isUserInteractionEnabled = true
-            //            Accessory.image = UIImage(named: "PurdueLogo")
         }
     }
     
@@ -348,10 +347,12 @@ class ViewController: UIViewController {
     private func queryPosts(completion: (() -> Void)? = nil) {
 
         let query = Clothing.query()
+                    //.include("user")
         
         query.find { [self] result in
             switch result {
             case .success(let clothingURL):
+                //initialize all the arraylists
                 clothing = clothingURL
                 for cloth in clothing{
                     if cloth.type! == "Accessory" {
@@ -389,19 +390,73 @@ class ViewController: UIViewController {
                     }
                     
                 }
+                //set original clothings when app is first opened
                 print(clothing.count)
-                accessoryIndex = 0
-                topIndex = 0
-                bottomIndex = 0
-                shoesIndex = 0
+                if (accessoryURL.count != 0) {
+                    AF.request(accessoryURL[accessoryIndex - 1], method: .get).response { response in
+                        switch response.result {
+                        case .success(let responseData):
+                            self.Accessory.image = UIImage(data: responseData!, scale:1)
+                            
+                        case .failure(let error):
+                            print("error--->",error)
+                        }
+                    }
+                } else {
+                    Accessory.image = UIImage(named: "cap")
+                }
+                if (topURL.count != 0) {
+                    AF.request(topURL[topIndex - 1], method: .get).response { response in
+                        switch response.result {
+                        case .success(let responseData):
+                            self.Top.image = UIImage(data: responseData!, scale:1)
+                            
+                        case .failure(let error):
+                            print("error--->",error)
+                        }
+                    }
+                } else {
+                    Top.image = UIImage(named: "shirt")
+                }
+                if (bottomURL.count != 0) {
+                    AF.request(bottomURL[bottomIndex - 1], method: .get).response { response in
+                        switch response.result {
+                        case .success(let responseData):
+                            self.Bottom.image = UIImage(data: responseData!, scale:1)
+                            
+                        case .failure(let error):
+                            print("error--->",error)
+                        }
+                    }
+                } else {
+                    Bottom.image = UIImage(named: "pants")
+                }
+                
+                if (shoesURL.count != 0) {
+                    AF.request(shoesURL[shoesIndex - 1], method: .get).response { response in
+                        switch response.result {
+                        case .success(let responseData):
+                            self.Shoes.image = UIImage(data: responseData!, scale:1)
+                            
+                        case .failure(let error):
+                            print("error--->",error)
+                        }
+                    }
+                } else {
+                    Shoes.image = UIImage(named: "shoes")
+                }
+//                accessoryIndex = 0
+//                topIndex = 0
+//                bottomIndex = 0
+//                shoesIndex = 0
                 print("yeehaw")
             case .failure(let error):
                 print("i hate this project")
             }
         }
-        print("hi")
+       // print("hi")
         
-        print(clothing.count)
+        //print(clothing.count)
         
         
         
