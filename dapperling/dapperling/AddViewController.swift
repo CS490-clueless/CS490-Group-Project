@@ -44,6 +44,7 @@ class AddViewController: UIViewController{
         newClothing.price = priceText.text
         newClothing.date = dateText.text
         newClothing.type = typeString!
+        newClothing.user = User.current?.objectId
         guard let image = pickedImage,
               // Create and compress image data (jpeg) from UIImage
               let imageData = image.jpegData(compressionQuality: 0.1) else {

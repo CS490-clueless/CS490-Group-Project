@@ -62,6 +62,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func accessoryRight(_ sender: Any) {
+        print(accessoryIndex)
+        print(accessoryArray.count)
         if (accessoryIndex < (accessoryArray.count)) {
             accessoryIndex += 1
         } else {
@@ -263,11 +265,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
        // queryPosts()
-//        accessoryIndex = 0
-//        topIndex = 0
-//        bottomIndex = 0
-//        shoesIndex = 0
+        accessoryIndex = 0
+        topIndex = 0
+        bottomIndex = 0
+        shoesIndex = 0
        // print(accessoryArray.count)
+        
     }
 
     @IBAction func onLogOutTapped(_ sender: Any) {
@@ -345,14 +348,15 @@ class ViewController: UIViewController {
     
     
     private func queryPosts(completion: (() -> Void)? = nil) {
+        print((User.current?.objectId)!)
 
-        let query = Clothing.query()
-                    //.include("user")
+        let query = Clothing.query().includeAll().where("user" == (User.current?.objectId)!)
         
         query.find { [self] result in
             switch result {
             case .success(let clothingURL):
                 //initialize all the arraylists
+                print(clothingURL.count)
                 clothing = clothingURL
                 for cloth in clothing{
                     if cloth.type! == "Accessory" {
@@ -466,6 +470,29 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if var currentUser = User.current {
+
+            // Update the `lastPostedDate` property on the user with the current date.
+            currentUser.lastPostedDate = Date()
+
+            // Save updates to the user (async)
+            currentUser.save { [weak self] result in
+                switch result {
+                case .success(let user):
+                    print("✅ User Saved! \(user)")
+
+                    // Switch to the main thread for any UI updates
+                    DispatchQueue.main.async {
+                        // Return to previous view controller
+                        self?.navigationController?.popViewController(animated: true)
+                    }
+
+                case .failure(let error):
+                    print("failed")
+                }
+            }
+        }
 
         queryPosts()
     }
