@@ -71,6 +71,7 @@ class ViewController: UIViewController {
             accessoryIndex = 1
         }
         
+        //update uiimageview
         if accessoryIndex != 0 {
             AF.request(accessoryURL[(accessoryIndex) - 1], method: .get).response { response in
                 switch response.result {
@@ -107,6 +108,7 @@ class ViewController: UIViewController {
             accessoryIndex = accessoryArray.count
         }
         
+        //update uiimageview
         if accessoryIndex != 0 {
             AF.request(accessoryURL[accessoryIndex - 1], method: .get).response { response in
                 switch response.result {
@@ -128,6 +130,7 @@ class ViewController: UIViewController {
             topIndex = 1
         }
         
+        //update uiimageview
         if topArray.count != 0 {
             AF.request(topURL[topIndex - 1], method: .get).response { response in
                 switch response.result {
@@ -149,6 +152,7 @@ class ViewController: UIViewController {
             topIndex = topArray.count
         }
         
+        //update uiimageview
         if topIndex != 0 {
             AF.request(topURL[topIndex - 1], method: .get).response { response in
                 switch response.result {
@@ -171,6 +175,7 @@ class ViewController: UIViewController {
             bottomIndex = 1
         }
         
+        //update uiimageview
         if bottomIndex != 0 {
             AF.request(bottomURL[bottomIndex - 1], method: .get).response { response in
                 switch response.result {
@@ -192,6 +197,7 @@ class ViewController: UIViewController {
             bottomIndex = bottomArray.count
         }
         
+        //update uiimageview
         if bottomIndex != 0 {
             AF.request(bottomURL[bottomIndex - 1], method: .get).response { response in
                 switch response.result {
@@ -215,6 +221,7 @@ class ViewController: UIViewController {
             shoesIndex = 1
         }
         
+        //update uiimageview
         if shoesIndex != 0 {
             AF.request(shoesURL[shoesIndex - 1], method: .get).response { response in
                 switch response.result {
@@ -236,6 +243,7 @@ class ViewController: UIViewController {
             shoesIndex = shoesArray.count
         }
         
+        //update uiimageview
         if shoesIndex != 0 {
             AF.request(shoesURL[shoesIndex - 1], method: .get).response { response in
                 switch response.result {
@@ -323,6 +331,7 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //send info over to detailviewcontroller
 
         if segue.identifier == "detailSegue",
             //let tappedView = sender as? UIView,
@@ -350,7 +359,7 @@ class ViewController: UIViewController {
     
     private func queryPosts(completion: (() -> Void)? = nil) {
         print((User.current?.objectId)!)
-        //empty then reinitialize all arrays
+        //empty then reinitialize all arrays using query
         accessoryArray.removeAll()
         topArray.removeAll()
         bottomArray.removeAll()
@@ -410,6 +419,8 @@ class ViewController: UIViewController {
                 if (accessoryURL.count != 0) {
                     if (accessoryIndex == 0) {
                         accessoryIndex = 1
+                        //just opened app, there is stuff in the arraylist, so index 1 to make
+                        //sure the first item in arraylist is initally displayed
                         AF.request(accessoryURL[0], method: .get).response { response in
                             switch response.result {
                             case .success(let responseData):
@@ -420,6 +431,8 @@ class ViewController: UIViewController {
                             }
                         }
                     } else {
+                        //came back to main screen from one of the other views, so index
+                        //does not need to initialzied
                         AF.request(accessoryURL[accessoryIndex - 1], method: .get).response { response in
                             switch response.result {
                             case .success(let responseData):
@@ -435,6 +448,8 @@ class ViewController: UIViewController {
                 }
                 if (topURL.count != 0) {
                     if (topIndex == 0) {
+                        //just opened app, there is stuff in the arraylist, so index 1 to make
+                        //sure the first item in arraylist is initally displayed
                         topIndex = 1
                         AF.request(topURL[0], method: .get).response { response in
                             switch response.result {
@@ -446,6 +461,8 @@ class ViewController: UIViewController {
                             }
                         }
                     } else {
+                        //came back to main screen from one of the other views, so index
+                        //does not need to initialzied
                         AF.request(topURL[topIndex - 1], method: .get).response { response in
                             switch response.result {
                             case .success(let responseData):
@@ -462,6 +479,8 @@ class ViewController: UIViewController {
                 if (bottomURL.count != 0) {
                     if (bottomIndex == 0) {
                         bottomIndex = 1
+                        //just opened app, there is stuff in the arraylist, so index 1 to make
+                        //sure the first item in arraylist is initally displayed
                         AF.request(bottomURL[0], method: .get).response { response in
                             switch response.result {
                             case .success(let responseData):
@@ -472,6 +491,8 @@ class ViewController: UIViewController {
                             }
                         }
                     } else {
+                        //came back to main screen from one of the other views, so index
+                        //does not need to initialzied
                         AF.request(bottomURL[bottomIndex - 1], method: .get).response { response in
                             switch response.result {
                             case .success(let responseData):
@@ -489,6 +510,8 @@ class ViewController: UIViewController {
                 if (shoesURL.count != 0) {
                     if (shoesIndex == 0) {
                         shoesIndex = 1
+                        //just opened app, there is stuff in the arraylist, so index 1 to make
+                        //sure the first item in arraylist is initally displayed
                         AF.request(shoesURL[0], method: .get).response { response in
                             switch response.result {
                             case .success(let responseData):
@@ -499,6 +522,8 @@ class ViewController: UIViewController {
                             }
                         }
                     } else {
+                        //came back to main screen from one of the other views, so index
+                        //does not need to initialzied
                         AF.request(shoesURL[bottomIndex - 1], method: .get).response { response in
                             switch response.result {
                             case .success(let responseData):
@@ -512,10 +537,6 @@ class ViewController: UIViewController {
                 } else {
                     Shoes.image = UIImage(named: "shoes")
                 }
-//                accessoryIndex = 0
-//                topIndex = 0
-//                bottomIndex = 0
-//                shoesIndex = 0
                 print("yeehaw")
             case .failure(let error):
                 print("i hate this project")
