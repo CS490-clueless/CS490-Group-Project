@@ -65,13 +65,14 @@ class ViewController: UIViewController {
         print(accessoryIndex)
         print(accessoryArray.count)
         if (accessoryIndex < (accessoryArray.count)) {
+            print("incremented!")
             accessoryIndex += 1
         } else {
             accessoryIndex = 1
         }
         
         if accessoryIndex != 0 {
-            AF.request(accessoryURL[(accessoryIndex - 1)], method: .get).response { response in
+            AF.request(accessoryURL[(accessoryIndex) - 1], method: .get).response { response in
                 switch response.result {
                 case .success(let responseData):
                         self.Accessory.image = UIImage(data: responseData!, scale:1)
@@ -264,11 +265,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       // queryPosts()
-        accessoryIndex = 0
-        topIndex = 0
-        bottomIndex = 0
-        shoesIndex = 0
+//        accessoryIndex = 0
+//        topIndex = 0
+//        bottomIndex = 0
+//        shoesIndex = 0
+        print("viewloading")
        // print(accessoryArray.count)
         
     }
@@ -349,6 +350,16 @@ class ViewController: UIViewController {
     
     private func queryPosts(completion: (() -> Void)? = nil) {
         print((User.current?.objectId)!)
+        //empty then reinitialize all arrays
+        accessoryArray.removeAll()
+        topArray.removeAll()
+        bottomArray.removeAll()
+        shoesArray.removeAll()
+        accessoryURL.removeAll()
+        topURL.removeAll()
+        bottomURL.removeAll()
+        shoesURL.removeAll()
+        print("removed")
 
         let query = Clothing.query().includeAll().where("user" == (User.current?.objectId)!)
         
@@ -360,7 +371,7 @@ class ViewController: UIViewController {
                 clothing = clothingURL
                 for cloth in clothing{
                     if cloth.type! == "Accessory" {
-                        accessoryIndex += 1
+                        //accessoryIndex += 1
                         print(accessoryIndex)
                         if let imageFile = cloth.imageFile,
                            let imageURL = imageFile.url {
@@ -369,7 +380,7 @@ class ViewController: UIViewController {
                         accessoryArray.append(cloth)
                     }
                     if cloth.type! == "Top" {
-                        topIndex += 1
+                        //topIndex += 1
                         if let imageFile = cloth.imageFile,
                            let imageURL = imageFile.url {
                             topURL.append(imageURL)
@@ -377,7 +388,7 @@ class ViewController: UIViewController {
                         topArray.append(cloth)
                     }
                     if cloth.type! == "Bottom" {
-                        bottomIndex += 1
+                        //bottomIndex += 1
                         if let imageFile = cloth.imageFile,
                            let imageURL = imageFile.url {
                             bottomURL.append(imageURL)
@@ -385,7 +396,7 @@ class ViewController: UIViewController {
                         bottomArray.append(cloth)
                     }
                     if cloth.type! == "Shoes" {
-                        shoesIndex += 1
+                        //shoesIndex += 1
                         if let imageFile = cloth.imageFile,
                            let imageURL = imageFile.url {
                             shoesURL.append(imageURL)
@@ -397,39 +408,78 @@ class ViewController: UIViewController {
                 //set original clothings when app is first opened
                 print(clothing.count)
                 if (accessoryURL.count != 0) {
-                    AF.request(accessoryURL[accessoryIndex - 1], method: .get).response { response in
-                        switch response.result {
-                        case .success(let responseData):
-                            self.Accessory.image = UIImage(data: responseData!, scale:1)
-                            
-                        case .failure(let error):
-                            print("error--->",error)
+                    if (accessoryIndex == 0) {
+                        accessoryIndex = 1
+                        AF.request(accessoryURL[0], method: .get).response { response in
+                            switch response.result {
+                            case .success(let responseData):
+                                self.Accessory.image = UIImage(data: responseData!, scale:1)
+                                
+                            case .failure(let error):
+                                print("error--->",error)
+                            }
+                        }
+                    } else {
+                        AF.request(accessoryURL[accessoryIndex - 1], method: .get).response { response in
+                            switch response.result {
+                            case .success(let responseData):
+                                self.Accessory.image = UIImage(data: responseData!, scale:1)
+                                
+                            case .failure(let error):
+                                print("error--->",error)
+                            }
                         }
                     }
                 } else {
                     Accessory.image = UIImage(named: "cap")
                 }
                 if (topURL.count != 0) {
-                    AF.request(topURL[topIndex - 1], method: .get).response { response in
-                        switch response.result {
-                        case .success(let responseData):
-                            self.Top.image = UIImage(data: responseData!, scale:1)
-                            
-                        case .failure(let error):
-                            print("error--->",error)
+                    if (topIndex == 0) {
+                        topIndex = 1
+                        AF.request(topURL[0], method: .get).response { response in
+                            switch response.result {
+                            case .success(let responseData):
+                                self.Top.image = UIImage(data: responseData!, scale:1)
+                                
+                            case .failure(let error):
+                                print("error--->",error)
+                            }
+                        }
+                    } else {
+                        AF.request(topURL[topIndex - 1], method: .get).response { response in
+                            switch response.result {
+                            case .success(let responseData):
+                                self.Top.image = UIImage(data: responseData!, scale:1)
+                                
+                            case .failure(let error):
+                                print("error--->",error)
+                            }
                         }
                     }
                 } else {
                     Top.image = UIImage(named: "shirt")
                 }
                 if (bottomURL.count != 0) {
-                    AF.request(bottomURL[bottomIndex - 1], method: .get).response { response in
-                        switch response.result {
-                        case .success(let responseData):
-                            self.Bottom.image = UIImage(data: responseData!, scale:1)
-                            
-                        case .failure(let error):
-                            print("error--->",error)
+                    if (bottomIndex == 0) {
+                        bottomIndex = 1
+                        AF.request(bottomURL[0], method: .get).response { response in
+                            switch response.result {
+                            case .success(let responseData):
+                                self.Bottom.image = UIImage(data: responseData!, scale:1)
+                                
+                            case .failure(let error):
+                                print("error--->",error)
+                            }
+                        }
+                    } else {
+                        AF.request(bottomURL[bottomIndex - 1], method: .get).response { response in
+                            switch response.result {
+                            case .success(let responseData):
+                                self.Bottom.image = UIImage(data: responseData!, scale:1)
+                                
+                            case .failure(let error):
+                                print("error--->",error)
+                            }
                         }
                     }
                 } else {
@@ -437,13 +487,26 @@ class ViewController: UIViewController {
                 }
                 
                 if (shoesURL.count != 0) {
-                    AF.request(shoesURL[shoesIndex - 1], method: .get).response { response in
-                        switch response.result {
-                        case .success(let responseData):
-                            self.Shoes.image = UIImage(data: responseData!, scale:1)
-                            
-                        case .failure(let error):
-                            print("error--->",error)
+                    if (shoesIndex == 0) {
+                        shoesIndex = 1
+                        AF.request(shoesURL[0], method: .get).response { response in
+                            switch response.result {
+                            case .success(let responseData):
+                                self.Shoes.image = UIImage(data: responseData!, scale:1)
+                                
+                            case .failure(let error):
+                                print("error--->",error)
+                            }
+                        }
+                    } else {
+                        AF.request(shoesURL[bottomIndex - 1], method: .get).response { response in
+                            switch response.result {
+                            case .success(let responseData):
+                                self.Shoes.image = UIImage(data: responseData!, scale:1)
+                                
+                            case .failure(let error):
+                                print("error--->",error)
+                            }
                         }
                     }
                 } else {
@@ -474,7 +537,7 @@ class ViewController: UIViewController {
         if var currentUser = User.current {
 
             // Update the `lastPostedDate` property on the user with the current date.
-            currentUser.lastPostedDate = Date()
+           // currentUser.lastPostedDate = Date()
 
             // Save updates to the user (async)
             currentUser.save { [weak self] result in
