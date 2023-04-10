@@ -13,6 +13,12 @@ Original App Design Project - README Template
 ### Description
 Your wardrobe in an app.
 
+Created with imgur (App Demonstration):
+
+https://imgur.com/a/GbL1qt8
+
+**GIF file also in repository
+
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category:**
